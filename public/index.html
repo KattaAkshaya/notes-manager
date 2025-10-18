@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Notes Manager App</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <style>
+    body { font-family: Arial, sans-serif; max-width: 900px; margin: 24px auto; padding: 0 16px; }
+    h1 { text-align: center; }
+    .form { display:flex; gap:8px; margin-bottom:16px; flex-wrap:wrap; }
+    .form input[type="text"], .form textarea { flex:1 1 300px; padding:8px; border:1px solid #ccc; border-radius:4px; }
+    .form button { padding:10px 14px; border:none; border-radius:6px; cursor:pointer; }
+    .btn-primary { background:#2b79ff; color:#fff; }
+    .btn-danger { background:#ff5252; color:#fff; }
+    .notes { display:flex; flex-direction:column; gap:10px; }
+    .note { border:1px solid #ddd; padding:12px; border-radius:8px; display:flex; justify-content:space-between; align-items:flex-start; gap:12px; }
+    .note-content { flex:1; }
+    .meta { font-size:12px; color:#666; margin-bottom:8px; }
+    .note-actions { display:flex; gap:8px; }
+    .note-actions button { padding:6px 10px; border-radius:6px; border:none; cursor:pointer; }
+    .small { font-size:13px; color:#444; }
+    .empty { color:#777; text-align:center; margin-top:8px; }
+  </style>
+</head>
+<body>
+  <h1>Notes Manager</h1>
+
+  <div class="form" id="noteForm">
+    <input id="title" type="text" placeholder="Title" />
+    <textarea id="description" placeholder="Description" rows="2"></textarea>
+    <button id="addBtn" class="btn-primary">Add Note</button>
+    <button id="cancelEditBtn" style="display:none;">Cancel</button>
+  </div>
+
+  <div id="notesContainer" class="notes">
+    <!-- Notes will be displayed here -->
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
